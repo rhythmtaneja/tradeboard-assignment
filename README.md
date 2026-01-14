@@ -46,6 +46,7 @@ The project demonstrates frontend-backend integration, JWT-based authentication,
 
 ## 📦 Project Structure
 
+```
 ### Backend
 backend/
 ├── app/
@@ -55,8 +56,9 @@ backend/
 │ ├── schemas/
 │ ├── database.py
 │ └── main.py
+```
 
-
+```
 ### Frontend
 frontend/
 ├── src/
@@ -65,24 +67,27 @@ frontend/
 │ ├── services/
 │ ├── utils/
 │ └── App.jsx
+```
 
 ---
 
 ## ⚙️ Setup Instructions
 
 ### Backend
-
+```
 cd backend
 pip install -r requirements.txt
 uvicorn app.main:app --reload
+```
 
 Backend runs on: http://127.0.0.1:8000
 
 ### Frontend
-
+```
 cd frontend
 npm install
 npm run dev
+```
 
 Frontend runs on: http://localhost:5173
 
@@ -90,35 +95,32 @@ Frontend runs on: http://localhost:5173
 🔍 API Documentation
 
 FastAPI automatically provides Swagger docs at:
-
+```
 http://127.0.0.1:8000/docs
+```
 
 🔒 Security Considerations
 
-Passwords are securely hashed using Argon2
+- Passwords are securely hashed using Argon2
+- JWT tokens are validated for protected routes
+- User data is scoped to authenticated users only
+- Sensitive configuration should be moved to environment variables in production
 
-JWT tokens are validated for protected routes
-
-User data is scoped to authenticated users only
-
-Sensitive configuration should be moved to environment variables in production
+---
 
 📈 Scalability Notes (Production Considerations)
 
-Replace SQLite with PostgreSQL
+- Replace SQLite with PostgreSQL
+- Store secrets using environment variables
+- Use HTTP-only cookies for JWT storage
+- Add refresh tokens
+- Add role-based access control if needed
+- Deploy frontend and backend separately
 
-Store secrets using environment variables
-
-Use HTTP-only cookies for JWT storage
-
-Add refresh tokens
-
-Add role-based access control if needed
-
-Deploy frontend and backend separately
-
-
+---
 
 👤 Author
 
-Built as part of a Frontend Developer Intern assignment.
+Rhythm Taneja
+
+Built as part of the Frontend Developer Intern assignment for Primetrade.ai.
