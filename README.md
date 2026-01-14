@@ -72,7 +72,6 @@ frontend/
 
 ### Backend
 
-```bash
 cd backend
 pip install -r requirements.txt
 uvicorn app.main:app --reload
@@ -80,6 +79,7 @@ uvicorn app.main:app --reload
 Backend runs on: http://127.0.0.1:8000
 
 ### Frontend
+
 cd frontend
 npm install
 npm run dev
@@ -116,6 +116,8 @@ Add refresh tokens
 Add role-based access control if needed
 
 Deploy frontend and backend separately
+
+
 
 👤 Author
 
